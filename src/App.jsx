@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
 
@@ -14,10 +14,12 @@ import OpenSource    from './components/OpenSource'
 import Research      from './components/Research'
 import Contact       from './components/Contact'
 import Footer        from './components/Footer'
+import PDFViewer     from './components/PDFViewer'
 
 export default function App() {
   const dot  = useRef(null)
   const ring = useRef(null)
+  const [pdfOpen, setPdfOpen] = useState(false)
 
   useEffect(() => {
     const move = e => {
@@ -33,9 +35,9 @@ export default function App() {
       <div ref={dot}  className="cursor-dot" />
       <div ref={ring} className="cursor-ring" />
 
-      <Navbar />
+      <Navbar onViewCV={() => setPdfOpen(true)} />
       <main>
-        <Hero />
+        <Hero onViewCV={() => setPdfOpen(true)} />
         <About />
         <Skills />
         <Projects />
@@ -47,6 +49,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <PDFViewer isOpen={pdfOpen} onClose={() => setPdfOpen(false)} />
 
       {/* Floating Resume FAB */}
       <motion.a

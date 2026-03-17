@@ -4,7 +4,7 @@ import { ChevronDown, Download, ArrowRight } from 'lucide-react'
 
 const ROLES = ['Full Stack Developer','DSA Enthusiast','Problem Solver','CS Student @ LPU']
 
-export default function Hero() {
+export default function Hero({ onViewCV }) {
   const [idx, setIdx] = useState(0)
   const [txt, setTxt] = useState('')
   const [del, setDel] = useState(false)
@@ -77,9 +77,9 @@ export default function Hero() {
           <button onClick={() => go('Projects')} className="btn-yellow">
             View Projects <ArrowRight size={16} />
           </button>
-          <a href="/assets/Adit_CV.pdf" download className="btn-ghost">
-            <Download size={16} /> Download Resume
-          </a>
+          <button onClick={onViewCV} className="btn-ghost">
+            <Download size={16} /> View CV
+          </button>
         </motion.div>
 
         {/* Stats */}

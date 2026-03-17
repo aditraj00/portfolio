@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, FileText } from 'lucide-react'
 
 const LINKS = ['Home','About','Skills','Projects','Certifications','Experience','Achievements','Contact']
 
-export default function Navbar() {
+export default function Navbar({ onViewCV }) {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('Home')
   const [solid, setSolid] = useState(false)
@@ -42,6 +42,12 @@ export default function Navbar() {
               </button>
             </li>
           ))}
+          <li>
+            <button onClick={onViewCV} className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif', background: '#FFD700', color: '#000' }}>
+              <FileText size={16} /> CV
+            </button>
+          </li>
         </ul>
 
         <button className="md:hidden" style={{ color: '#FFFFFF' }} onClick={() => setOpen(!open)}>
@@ -51,6 +57,10 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden px-6 py-5 flex flex-col gap-5" style={{ background: '#0E0E0E', borderTop: '1px solid #1E1E1E' }}>
+          <button onClick={() => { onViewCV(); setOpen(false) }} className="mt-3 flex items-center gap-2 w-full px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+            style={{ fontFamily: 'Inter, sans-serif', background: '#FFD700', color: '#000' }}>
+            <FileText size={16} /> View CV
+          </button>
           {LINKS.map(l => (
             <button key={l} onClick={() => go(l)} className="text-left text-sm font-medium"
               style={{ fontFamily: 'Inter, sans-serif', color: active === l ? '#FFD700' : '#888' }}>
