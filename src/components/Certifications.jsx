@@ -14,7 +14,7 @@ export default function Certifications() {
       <div className="max-w-5xl mx-auto">
 
         <motion.div className="mb-14" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }}>
-          <h2 className="sec-title">Certifications <span>&</span> Courses</h2>
+          <h2 className="sec-title">Certifications </h2>
           <div className="yellow-bar" />
         </motion.div>
 
