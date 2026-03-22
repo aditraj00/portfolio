@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import profileImg from '../assets/profile.jpg'
 import { GraduationCap, MapPin, Code2, Cpu } from 'lucide-react'
 
 const EDU = [
@@ -24,10 +25,12 @@ export default function About() {
             initial={{ opacity:0, x:-30 }} whileInView={{ opacity:1, x:0 }} viewport={{ once:true }}>
 
             <div className="relative w-fit">
-              <div className="w-28 h-28 rounded-2xl flex items-center justify-center"
-                style={{ background:'#1A1500', border:'2px solid #FFD700' }}>
-                <span style={{ fontFamily:'Space Grotesk, sans-serif', fontSize:'2.2rem', fontWeight:700, color:'#FFD700' }}>AR</span>
-              </div>
+              <img 
+                src={profileImg}
+                alt="Profile"
+                className="w-28 h-28 rounded-2xl object-cover border-2 border-yellow-400"
+                style={{ background:'#1A1500' }}
+              />
               <span className="absolute -bottom-1.5 -right-1.5 w-5 h-5 rounded-full border-2 border-[#0E0E0E]" style={{ background:'#22c55e' }} />
             </div>
 

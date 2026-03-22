@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Download, ExternalLink } from 'lucide-react'
-import CVPdf from '../assets/Adit\'s CV.pdf'
+import CVPdf from '../assets/Adit\'s  CV.pdf'
 
 export default function PDFViewer({ isOpen, onClose }) {
   return (
@@ -58,7 +58,7 @@ export default function PDFViewer({ isOpen, onClose }) {
                 Download
               </a>
               <a
-                href={CVPdf}
+                href="/src/assets/Adit's%20%20CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-yellow-600/50 text-yellow-400 font-semibold hover:bg-yellow-600/10 transition"

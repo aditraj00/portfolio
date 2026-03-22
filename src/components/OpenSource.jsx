@@ -21,9 +21,7 @@ export default function OpenSource() {
 
         <motion.div className="flex flex-col sm:flex-row gap-5 justify-center items-center"
           initial={{ opacity:0 }} whileInView={{ opacity:1 }} viewport={{ once:true }} transition={{ delay:0.2 }}>
-          <img
-            src="https://github-readme-stats.vercel.app/api?username=aditraj00&show_icons=true&theme=dark&title_color=FFD700&icon_color=FFD700&border_color=1E1E1E&bg_color=111111&text_color=FFFFFF"
-            alt="GitHub Stats" className="rounded-xl max-w-full" style={{ border:'1px solid #1E1E1E' }} />
+      
           <img
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=aditraj00&layout=compact&title_color=FFD700&border_color=1E1E1E&bg_color=111111&text_color=FFFFFF"
             alt="Top Languages" className="rounded-xl max-w-full" style={{ border:'1px solid #1E1E1E' }} />

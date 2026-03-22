@@ -14,6 +14,7 @@ const PROJECTS = [
     tags:['PHP','MySQL','Tailwind CSS','JavaScript','jQuery'],
     live:'#', github:'https://github.com/aditraj00/traffic-and-accident-mangement',
   },
+  
 ]
 
 export default function Projects() {

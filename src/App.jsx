@@ -11,7 +11,6 @@ import Certifications from './components/Certifications'
 import Experience    from './components/Experience'
 import Hackathons    from './components/Hackathons'
 import OpenSource    from './components/OpenSource'
-import Research      from './components/Research'
 import Contact       from './components/Contact'
 import Footer        from './components/Footer'
 import PDFViewer     from './components/PDFViewer'
@@ -45,7 +44,7 @@ export default function App() {
         <Experience />
         <Hackathons />
         <OpenSource />
-        <Research />
+        {/* <Research /> Removed: Component does not exist */}
         <Contact />
       </main>
       <Footer />
@@ -53,7 +52,8 @@ export default function App() {
 
       {/* Floating Resume FAB */}
       <motion.a
-        href="/assets/Adit_CV.pdf" download
+        href={"/src/assets/Adit's%20%20CV.pdf"}
+        download
         className="btn-yellow fixed bottom-6 right-6 z-50"
         style={{ padding:'11px 22px', fontSize:'0.82rem', boxShadow:'0 0 24px rgba(255,215,0,0.25)' }}
         animate={{ scale:[1, 1.06, 1] }}

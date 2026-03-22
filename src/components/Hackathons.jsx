@@ -3,6 +3,7 @@ import { Trophy, Zap, Film, Users } from 'lucide-react'
 
 const ITEMS = [
   { icon:Trophy, title:'Binary Blitz 24-Hour Hackathon', org:'Coding Ninjas × LPU',           badge:'🏆 Finalist',    desc:'Reached the final round of the 24-hour competitive hackathon.' },
+  { icon:Users, title:'State-Level Cricketer', org:'Jharkhand/East Zone', badge:'🏏 Player', desc:'Represented Jharkhand as a cricketer at the state level.' },
   { icon:Zap,    title:'AWS One Day Online Conference',  org:'Amazon Web Services',             badge:'☁️ Attendee',   desc:'Attended the AWS online conference, gaining insights into cloud architecture.' },
   { icon:Film,   title:'Cinemania Event Coordinator',   org:'Lovely Professional University',  badge:'🎬 Coordinator', desc:'Coordinated and managed the Cinemania university event end-to-end.' },
   { icon:Users,  title:'Active Member — Cinema Society', org:'LPU Cinema Society',             badge:'🎭 Member',     desc:'Active member contributing to cultural and creative events at the university.' },
@@ -14,7 +15,7 @@ export default function Hackathons() {
       <div className="max-w-5xl mx-auto">
 
         <motion.div className="mb-14" initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }}>
-          <h2 className="sec-title">Achievements <span>&</span> Hackathons</h2>
+          <h2 className="sec-title">Achievements</h2>
           <div className="yellow-bar" />
         </motion.div>
 
